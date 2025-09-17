@@ -1,7 +1,9 @@
 # 🏆 IJCAI 2025 - Deepfake Detection Pipeline
 
+## 📌 About This Project
+
 This repository contains our solution for the **IJCAI 2025 Workshop on Deepfake Detection, Localization, and Interpretability**.  
-🥉 Achieved **3rd Place** in the **Image Track**.
+It achieved **🥉 3rd Place** in the **Image Track**.  
 
 ## 📁 Project Structure
 
@@ -198,47 +200,47 @@ project_root/
     ```
 - The training Configuration for **Lav**
 
-You can find more information in ```ijcai_ddl_code/Lav/training/config/detector/dual_stream.yaml```.
+	You can find more information in ```ijcai_ddl_code/Lav/training/config/detector/dual_stream.yaml```.
 
-**Basic Training Configuration**
-
-| Parameter   | Value |
-| ----------- | ----- |
-| Epochs      | 30    |
-| Batch Size  | 76    |
-| Num Workers | 16    |
-| Resolution  | 299   |
-| Manual Seed | 1024  |
-
-**Optimizer and Learning Rate Scheduler**
-
-| Parameter     | Value                           |
-| ------------- | ------------------------------- |
-| Optimizer     | Adam                            |
-| Learning Rate | 5e-4                            |
-| Beta          | (0.9, 0.999)                    |
-| Epsilon       | 1e-8                            |
-| Weight Decay  | 1e-5                            |
-| LR Scheduler  | Cosine                          |
-
-**Data Augmentation Parameters**
-
-| Parameter        | Value     |
-| ---------------- | --------- |
-| Shift Limit      | 0.0625    |
-| Scale Limit      | 0.2       |
-| Rotate Limit     | 45°       |
-| Blur Limit       | [3, 11]   |
-| Noise Variance   | [10.0, 60.0] |
-| Brightness/Contrast | [-0.3, 0.3] |
-| JPEG Compression | [50, 100] |
-
-**Model Architecture**
-
-| Parameter        | Value     |
-| ---------------- | --------- |
-| Backbone         | Xception  |
-| Pretrained Weights | `./checkpoints/xception-b5690688.pth` |
+	**Basic Training Configuration**
+	
+	| Parameter   | Value |
+	| ----------- | ----- |
+	| Epochs      | 30    |
+	| Batch Size  | 76    |
+	| Num Workers | 16    |
+	| Resolution  | 299   |
+	| Manual Seed | 1024  |
+	
+	**Optimizer and Learning Rate Scheduler**
+	
+	| Parameter     | Value                           |
+	| ------------- | ------------------------------- |
+	| Optimizer     | Adam                            |
+	| Learning Rate | 5e-4                            |
+	| Beta          | (0.9, 0.999)                    |
+	| Epsilon       | 1e-8                            |
+	| Weight Decay  | 1e-5                            |
+	| LR Scheduler  | Cosine                          |
+	
+	**Data Augmentation Parameters**
+	
+	| Parameter        | Value     |
+	| ---------------- | --------- |
+	| Shift Limit      | 0.0625    |
+	| Scale Limit      | 0.2       |
+	| Rotate Limit     | 45°       |
+	| Blur Limit       | [3, 11]   |
+	| Noise Variance   | [10.0, 60.0] |
+	| Brightness/Contrast | [-0.3, 0.3] |
+	| JPEG Compression | [50, 100] |
+	
+	**Model Architecture**
+	
+	| Parameter        | Value     |
+	| ---------------- | --------- |
+	| Backbone         | Xception  |
+	| Pretrained Weights | `./checkpoints/xception-b5690688.pth` |
 
 
 
@@ -254,47 +256,47 @@ You can find more information in ```ijcai_ddl_code/Lav/training/config/detector/
 - The training Configuration for **Mesorch**
 You can find more information in ```ijcai_ddl_code/Lav/training/config/detector/mesorch.yaml```.
 
-**Basic Training Configuration**
-
-| Parameter        | Value |
-| ---------------- | ----- |
-| Epochs           | 100   |
-| Batch Size       | 24    |
-| Num Workers      | 16    |
-| Resolution       | 512   |
-| Warmup Epochs    | 4     |
-
-**Optimizer and Learning Rate Scheduler**
-
-| Parameter               | Value                                      |
-| ----------------------- | ------------------------------------------ |
-| Optimizer               | AdamW                                      |
-| Learning Rate           | 1e-4                                       |
-| Beta                    | (0.9, 0.999)                               |
-| Weight Decay            | 0.05                                       |
-| warmup_epochs           | 2                                          |
-| min_lr                  | 0.0000005                                  |
-| LR Scheduler            | Cosine                                     |
-
-**Data Augmentation Parameters**
-
-| Parameter           | Value         |
-| ------------------- | ------------- |
-| Shift Limit         | 0.0625        |
-| Scale Limit         | 0.1           |
-| Rotate Limit        | 25°           |
-| Blur Limit          | [3, 7]        |
-| Noise Variance      | [10.0, 60.0]  |
-| Brightness/Contrast | [-0.3, 0.3]   |
-| JPEG Compression    | [50, 100]     |
-
-
-**Model Architecture**
-
-| Parameter        | Value     |
-| ---------------- | --------- |
-| Backbone         | mixvit  |
-| Pretrained Weights | `./checkpoints/mit_b3.pth` |
+	**Basic Training Configuration**
+	
+	| Parameter        | Value |
+	| ---------------- | ----- |
+	| Epochs           | 100   |
+	| Batch Size       | 24    |
+	| Num Workers      | 16    |
+	| Resolution       | 512   |
+	| Warmup Epochs    | 4     |
+	
+	**Optimizer and Learning Rate Scheduler**
+	
+	| Parameter               | Value                                      |
+	| ----------------------- | ------------------------------------------ |
+	| Optimizer               | AdamW                                      |
+	| Learning Rate           | 1e-4                                       |
+	| Beta                    | (0.9, 0.999)                               |
+	| Weight Decay            | 0.05                                       |
+	| warmup_epochs           | 2                                          |
+	| min_lr                  | 0.0000005                                  |
+	| LR Scheduler            | Cosine                                     |
+	
+	**Data Augmentation Parameters**
+	
+	| Parameter           | Value         |
+	| ------------------- | ------------- |
+	| Shift Limit         | 0.0625        |
+	| Scale Limit         | 0.1           |
+	| Rotate Limit        | 25°           |
+	| Blur Limit          | [3, 7]        |
+	| Noise Variance      | [10.0, 60.0]  |
+	| Brightness/Contrast | [-0.3, 0.3]   |
+	| JPEG Compression    | [50, 100]     |
+	
+	
+	**Model Architecture**
+	
+	| Parameter        | Value     |
+	| ---------------- | --------- |
+	| Backbone         | mixvit  |
+	| Pretrained Weights | `./checkpoints/mit_b3.pth` |
 
 ## 🧪 Test Process
 
